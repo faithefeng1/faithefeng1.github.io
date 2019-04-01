@@ -1,24 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Fugui</title>
-        <meta name="author" content="Fan">
-        <script>
-            function promptDialog(){
-                var name = prompt("你的名字是");
-                  alert("你好:"+name);
-            }
-        </script>
-    </head>
-    <body>
-        <div>
-            <p>
-                富贵他妈节日快乐！
-            </p>
-            <dialog open onclick="alert('你好！')">这是打开的对话窗口</dialog>
-        </div>
-    </body>
-
-
-
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style type="text/css">
+            #a{
+                width: 500px;
+                height: 200px;
+                position: absolute;
+                left: 500px;
+                top: 200px;
+                padding-top: 100px;
+                background-color: pink;
+                border: 1px black solid ;
+                text-align: center;
+            }
+            #no{
+                position: absolute;
+                left: 100px;
+                top: 100px;
+            }
+        </style>
+        <script>
+            function a(){
+                var no = document.getElementById("no");
+                no.style.left = Math.floor(Math.random()*450)+"px";
+                no.style.top = Math.floor(Math.random()*280)+"px";
+            }
+            function b(){
+                alert("得到你了！哈哈")
+            }
+        </script>
+    </head>
+    <body>
+        <div id="a" clas="a" style="color: red;">
+            <span>DO you wang to marry with  me?</span><br />
+            <button onclick="b()">yes</button>  <br />
+            <button onmouseover="a()" id="no">no</button>
+        </div>
+    </body>
 </html>
